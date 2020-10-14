@@ -16,8 +16,17 @@ function Contact() {
       />
       <div className='status'>
         <div className='name'>{name}</div>
-        <div className=' contact '></div>
-        <div className='status'>{online ? statonline : statoffline}</div>
+        <p className='status-text'>
+          {online ? (
+            <p>
+              <span className='status-online'></span> <span>online</span>
+            </p>
+          ) : (
+            <p>
+              <span className='status-offline'></span> <span>offline</span>
+            </p>
+          )}
+        </p>
       </div>
     </div>
   );
